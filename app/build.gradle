@@ -1,0 +1,80 @@
+plugins {
+    id 'com.android.application'
+    id 'androidx.navigation.safeargs'
+}
+
+android {
+    compileSdkVersion 31
+
+    /*These are the warnings that appear inside code, but by mentioning them here,
+    * Android studio will not give warning inside code*/
+    lintOptions{
+        disable 'NewApi'
+        disable 'RelativeOverlap'
+        disable 'SetTextI18n'
+        disable 'Recycle'
+        disable 'Range'
+    }
+
+    defaultConfig {
+        applicationId "com.example.madpropertypal"
+        minSdkVersion 16
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'org.jetbrains:annotations:15.0'
+    implementation 'org.jetbrains:annotations:15.0'
+    def nav_version = "2.3.5"
+
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    //Responsive Design
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    //Navigation Component
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+    //Google Map
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation "com.google.android.gms:play-services-location:18.0.0"
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+    implementation 'com.google.maps:google-maps-services:0.14.0'
+    implementation 'com.google.android.gms:play-services-base:17.1.0'
+    //Image Picker and Cropper
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    //Retrofit For Networking
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.8.1'
+    //To load Network Images
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    //Multidex Error (Cannot fit requested classes in a single dex file (# methods: 71494 > 65536))
+    implementation 'androidx.multidex:multidex:2.0.1'
+}

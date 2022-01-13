@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/propertyListFragment"
+            android:enabled="true"
+            android:icon="@drawable/ic_all"
+            android:title="@string/all" />
+        <item
+            android:id="@+id/favouriteListFragment"
+            android:enabled="true"
+            android:icon="@drawable/ic_favorite"
+            android:title="@string/favourite" />
+        <item
+            android:id="@+id/myListFragment"
+            android:enabled="true"
+            android:icon="@drawable/ic_my_account"
+            android:title="@string/my_list" />
+    </group>
+</menu>

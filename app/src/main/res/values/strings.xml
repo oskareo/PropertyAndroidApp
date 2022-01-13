@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">MadPropertyPal</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="add_property">Add Property</string>
+    <string name="view_property_report"><u>View Property Report</u></string>
+    <string name="add_report">Add Report</string>
+    <string name="date_of_viewing">Date Of Viewing</string>
+    <string name="interest">Interest</string>
+    <string name="offer_price">Offer Price</string>
+    <string name="offer_expiry_date">Offer Expiry Date</string>
+    <string name="conditions_of_offer">Conditions of Offer</string>
+    <string name="viewing_comments">Viewing Comments</string>
+    <string name="property_name">Property Name</string>
+    <string name="property_type">Property Type</string>
+    <string name="lease_type">Lease Type</string>
+    <string name="location">Location</string>
+    <string name="bedrooms">Bedrooms</string>
+    <string name="bathrooms">Bathrooms</string>
+    <string name="size">Size</string>
+    <string name="asking_price">Asking Price</string>
+    <string name="local_amenities">Local Amenities</string>
+    <string name="description">Description</string>
+    <string name="floors">Floors</string>
+    <string name="are_you_sure_you_want_to_continue_with_these_details"><u>Are you sure you want to continue with these details</u></string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="update_property">Update Property</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="create_account">Create Account</string>
+    <string name="google_map_key">AIzaSyDWQKJoslG1fsUKyXEgfWJzd7B94NAFezI</string>
+    <string name="all">All</string>
+    <string name="favourite">Favourite</string>
+    <string name="my_account">My Account</string>
+    <string name="my_list">My List</string>
+    <string name="add_picture"><u>Add Picture</u></string>
+    <string name="please_wait">Please Wait . . .</string>
+
+</resources>

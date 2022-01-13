@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/propertyListFragment">
+
+    <fragment
+        android:id="@+id/propertyListFragment"
+        android:name="com.example.madpropertypal.fragment.bottom_nav.PropertyListFragment"
+        android:label="fragment_property_list"
+        tools:layout="@layout/fragment_property_list">
+        <action
+            android:id="@+id/action_propertyListFragment_to_propertyAddFragment"
+            app:destination="@id/propertyAddFragment" />
+        <action
+            android:id="@+id/action_propertyListFragment_to_propertyDetailFragment"
+            app:destination="@id/propertyDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/propertyAddFragment"
+        android:name="com.example.madpropertypal.fragment.property.PropertyAddFragment"
+        android:label="fragment_property_add"
+        tools:layout="@layout/fragment_property_add" />
+    <fragment
+        android:id="@+id/propertyDetailFragment"
+        android:name="com.example.madpropertypal.fragment.property.PropertyDetailFragment"
+        android:label="fragment_property_detail"
+        tools:layout="@layout/fragment_property_detail">
+        <action
+            android:id="@+id/action_propertyDetailFragment_to_propertyReportFragment"
+            app:destination="@id/propertyReportFragment" />
+        <argument
+            android:name="property"
+            app:argType="com.example.madpropertypal.model.Property"
+            app:nullable="false" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/propertyReportFragment"
+        android:name="com.example.madpropertypal.fragment.report.PropertyReportFragment"
+        android:label="fragment_property_reports"
+        tools:layout="@layout/fragment_property_reports">
+        <action
+            android:id="@+id/action_propertyReportFragment_to_reportAddFragment"
+            app:destination="@id/reportAddFragment" />
+        <argument
+            android:name="property"
+            app:argType="com.example.madpropertypal.model.Property"
+            app:nullable="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportAddFragment"
+        android:name="com.example.madpropertypal.fragment.report.ReportAddFragment"
+        android:label="fragment_report_add"
+        tools:layout="@layout/fragment_report_add">
+        <argument
+            android:name="property"
+            app:argType="com.example.madpropertypal.model.Property"
+            app:nullable="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteListFragment"
+        android:name="com.example.madpropertypal.fragment.bottom_nav.FavouriteListFragment"
+        android:label="fragment_favourite_list"
+        tools:layout="@layout/fragment_favourite_list">
+        <action
+            android:id="@+id/action_favouriteListFragment_to_propertyAddFragment"
+            app:destination="@id/propertyAddFragment" />
+        <action
+            android:id="@+id/action_favouriteListFragment_to_propertyDetailFragment"
+            app:destination="@id/propertyDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myListFragment"
+        android:name="com.example.madpropertypal.fragment.bottom_nav.MyListFragment"
+        android:label="fragment_my_list"
+        tools:layout="@layout/fragment_my_list">
+        <action
+            android:id="@+id/action_myListFragment_to_propertyAddFragment"
+            app:destination="@id/propertyAddFragment" />
+        <action
+            android:id="@+id/action_myListFragment_to_propertyDetailFragment"
+            app:destination="@id/propertyDetailFragment" />
+    </fragment>
+
+
+</navigation>
